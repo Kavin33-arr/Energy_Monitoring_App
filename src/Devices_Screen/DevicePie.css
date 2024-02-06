@@ -1,0 +1,35 @@
+/* Original styles for screens wider than 860px */
+.DevicePie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 40px;
+    margin-right: 1%;
+}
+
+.header {
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.Chart {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Media query for screens less than 860px */
+@media screen and (max-width: 860px) {
+    .header {
+        font-size: 14px;
+    }
+
+    .DevicePie {
+        width: 100%;
+    }
+}

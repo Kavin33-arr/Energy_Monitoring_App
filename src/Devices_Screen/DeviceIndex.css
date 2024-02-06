@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+body {
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(27, 101, 118, 0.27) 0%, rgba(8, 60, 67, 0.34) 0.01%, rgba(61, 108, 142, 0.04) 71.86%, rgba(172, 66, 66, 0.00) 100%),
+        linear-gradient(180deg, rgba(21, 1, 1, 0.50) 99%, rgba(31, 28, 28, 0.00) 100%),
+        #060530;
+
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pieDiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    justify-content: space-evenly;
+}
+
+.consumptionGraph {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

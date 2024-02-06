@@ -1,0 +1,54 @@
+.ThisSession{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.thisSessionHeader{
+    color: white;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 8%;
+}
+
+.thisSessionPower,.thisSessionPrice,.thisSessionDuration{
+    color:white;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
+.smallFont{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(241, 241, 241);
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ThisSession {
+        width: 100%;
+        margin-top: 4%;
+    }
+
+    .ThisSessionPower,
+    .ThisSessionPrice,
+    .ThisSessionDuration {
+        font-size: 30px;
+    }
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .ThisSession {
+        margin: 5%;
+        width:100%;
+    }
+
+    .ThisSessionPower,
+    .ThisSessionPrice,
+    .ThisSessionDuration {
+        font-size: 20px;
+    }
+
+    .smallFont {
+        font-size: 16px;
+    }
+}

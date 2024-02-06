@@ -1,0 +1,193 @@
+.deviceList {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.deviceLink,
+.deviceLink:hover {
+    color: none;
+    background: none;
+    border: none;
+}
+
+.tableHeader {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 90%;
+}
+
+.yourDeviceLabel {
+    width: 80%;
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttonGroup button {
+    position: relative;
+}
+
+.buttonGroup button:hover::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    top: 100%;
+    /* Position the text below the button */
+    left: 50%;
+    /* Center the text horizontally */
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Additional styles for the remove button */
+.remove:hover::after {
+    left: 50%;
+    /* Center the text horizontally */
+    transform: translateX(-50%);
+}
+
+/* Additional styles for the new button */
+.new:hover::after {
+    left: 50%;
+    /* Center the text horizontally */
+    transform: translateX(-50%);
+}
+
+button {
+    background: none;
+    color: white;
+    size: 34px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h3 {
+    color: white;
+}
+
+.deviceTable {
+    width: 90%;
+    border-collapse: collapse;
+    color: #fff;
+
+    /* Add other table styling as needed */
+}
+
+
+.deviceTable th,
+.deviceTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.wideColumn {
+    width: 40%;
+    /* Adjust the width as needed */
+}
+
+/* Add other styling as needed */
+
+.onlineStatus {
+    color: #05F757;
+}
+
+.offlineStatus {
+    color: #d61111;
+}
+
+.svgOnline {
+    color: #05F757;
+}
+
+.svgOffline {
+    color: #d61111;
+}
+
+.buttonGroup button svg {
+    width: 28px;
+    /* Adjust the size as needed for bigger screens */
+    height: 28px;
+}
+
+.onlineStatus:hover,
+.offlineStatus:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Styles for smaller screens */
+@media only screen and (max-width: 600px) {
+
+
+    /* Hide columns 1, 2, 4 for smaller screens */
+    .deviceTable th:nth-child(1),
+    .deviceTable td:nth-child(1),
+    .deviceTable th:nth-child(2),
+    .deviceTable td:nth-child(2),
+    .deviceTable th:nth-child(4),
+    .deviceTable td:nth-child(4) {
+        display: none;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .yourDeviceLabel {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+
+
+    .deviceTable th,
+    .deviceTable td {
+        font-size: 14px;
+    }
+
+    .tableHeader {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2%;
+        margin-bottom: 6%;
+        justify-content: space-evenly;
+        align-content: center;
+        width: 90%;
+    }
+
+    .buttonGroup button svg {
+        width: 16px;
+        /* Adjust the size as needed for smaller screens */
+        height: 16px;
+    }
+}

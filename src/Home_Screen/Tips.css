@@ -1,0 +1,81 @@
+/* Original Styles for .Tips */
+.Tips {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1EB3B3;
+    border-radius: 43px;
+    width: 651px;
+    height: 130px;
+    margin: 2%;
+    background: linear-gradient(350deg, #12133C 18.44%, rgba(16, 1, 1, 0.00) 100%);
+}
+
+.Tips_header {
+    display: flex;
+    margin: 1% 2% 1% 2%;
+    width: 28%;
+    height: 15%;
+}
+
+.Tips_header span {
+    margin-left: 4%;
+    margin-top: 5px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Tips_content {
+    color: #1EB3B3;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+/* Media Query for screens with a maximum width of 860 pixels and a minimum width of 601 pixels */
+@media only screen and (max-width: 860px) and (min-width: 601px) {
+    .Tips {
+        width: 90%;
+        height: 80%;
+        margin: 5%;
+    }
+
+    .Tips_header {
+        width: 40%;
+    }
+
+    .Tips_header span {
+        font-size: 18px;
+    }
+
+    .Tips_content {
+        font-size: 16px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width: 600px) {
+    .Tips {
+        width: 90%;
+        height: 80%;
+        margin: 5%;
+    }
+
+    .Tips_header {
+        width: 50%;
+    }
+
+    .Tips_header span {
+        font-size: 16px;
+    }
+
+    .Tips_content {
+        font-size: 14px;
+    }
+}

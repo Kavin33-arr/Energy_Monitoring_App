@@ -1,0 +1,116 @@
+.DeviceStats {
+    width: 20%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 2%;
+
+
+}
+
+.carousel {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 43px;
+    overflow: hidden;
+    padding: 1%;
+    position: relative;
+    width: 85%;
+}
+
+.carouselSlide1,
+.carouselSlide2,
+.carouselSlide3,
+.carouselSlide4,
+.carouselSlide5,
+.carouselSlide6 {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    transform: translate(300px);
+}
+
+.carouselSlide1.active::after,
+.carouselSlide2.active::after,
+.carouselSlide3.active::after,
+.carouselSlide4.active::after,
+.carouselSlide5.active::after,
+.carouselSlide6.active::after {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    transform: translateX(-500px);
+    /* Adjusted to start from right */
+}
+
+.carouselSlide1.active::before,
+.carouselSlide2.active::before,
+.carouselSlide3.active::before,
+.carouselSlide4.active::before,
+.carouselSlide5.active::before,
+.carouselSlide6.active::before {
+    transform: translateX(600px);
+    /* Adjusted to start from right */
+    opacity: 0;
+}
+
+.carouselSlide1.active,
+.carouselSlide2.active,
+.carouselSlide3.active,
+.carouselSlide4.active,
+.carouselSlide5.active,
+.carouselSlide6.active {
+    transform: translateX(0);
+    /* Adjusted to start from right */
+    opacity: 1;
+    transition: 1s;
+}
+
+.slide1Main {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 1%;
+}
+
+.slide1Sub {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.slide1Head {
+    text-align: center;
+
+
+}
+
+
+.smallSub {
+    font-size: 14px;
+    padding: 1%;
+}
+
+.slide1MainWord {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 1%;
+
+}
+
+.rightCarouselNavigation:hover,
+.leftCarouselNavigation:hover {
+    scale: 1.1;
+    cursor: pointer;
+
+}

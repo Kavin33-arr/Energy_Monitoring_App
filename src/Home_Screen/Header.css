@@ -1,0 +1,112 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    background: none;
+    margin-top: 18px;
+    margin: 1% 2.5% 1% 2.5%;
+}
+
+.greetings {
+
+    color: #FFF;
+    background: none;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: auto;
+}
+
+ul {
+    background: none;
+}
+
+li {
+    display: inline-block;
+    padding: 0px;
+    margin-left: 40px;
+
+
+}
+
+a {
+    padding: 10px 40px 10px 40px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 40px;
+}
+
+
+.menu-button {
+    display: none;
+    /* Initially hide the menu button */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #1EB3B3;
+    transition: 0.25s;
+    border-bottom: 1px solid #FFF;
+}
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width:710px) {
+    .nav {
+        display: none;
+        /* Hide the regular buttons */
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .menu-button {
+        display: inline-block;
+        /* Show the menu button */
+        /* Additional styles for the menu button in smaller screens */
+        font-size: 18px;
+        background: none;
+        color: white;
+    }
+
+    .greetings {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 711px) {
+    li {
+        margin-left: 10px;
+        /* Further reduced margin for screens between 600px and 860px */
+    }
+
+    a {
+        padding: 5px 14px;
+        /* Further reduced padding for smaller screens */
+        font-size: 14px;
+        /* Further reduced font size for smaller screens */
+    }
+
+    .nav {
+        display: none;
+        /* Hide the regular buttons */
+    }
+
+    .menu-button {
+        display: inline-block;
+        /* Show the menu button */
+        /* Additional styles for the menu button in smaller screens */
+        font-size: 18px;
+        background: none;
+        color: white;
+    }
+}

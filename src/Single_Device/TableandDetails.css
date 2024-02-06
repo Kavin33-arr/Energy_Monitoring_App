@@ -1,0 +1,82 @@
+.todayTable1 {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.tableAndDetails {
+    margin-top: 4%;
+}
+
+
+
+.todayTable th,
+.todayTable td {
+    border: 1px solid white;
+    color: white;
+    padding: 2%;
+    margin: 4%;
+    text-align: center;
+}
+
+.tableAndDetails {
+    width: 250px;
+}
+
+
+
+.todayDetails {
+    color: white;
+}
+
+.percent {
+    padding-top: 4%;
+    font-size: 58px;
+    font-weight: 700;
+}
+
+/* ... (your existing styles) */
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width: 600px) {
+    .tableAndDetails {
+        flex-direction: column;
+        /* Reverse the order for smaller screens */
+    }
+
+    .todayTable {
+        width: 100%;
+        /* Make the table take the full width */
+        margin-bottom: 10px;
+        /* Add some margin between the table and details */
+    }
+
+    .todayTable1 {
+        width: 100%;
+        /* Make the table take the full width */
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .tableAndDetails {
+
+        width:100%;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .tableAndDetails {
+        display: flex;
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .todayDetails {
+        text-align: center;
+        width: 100%;
+    }
+}

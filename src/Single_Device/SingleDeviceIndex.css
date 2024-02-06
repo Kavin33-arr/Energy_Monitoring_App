@@ -1,0 +1,98 @@
+.firstRow ,.secondRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.firstRowFirstHalf {
+    width: 30%;
+}
+.secondRowFirstHalf{
+    width: 30%;
+}
+
+.firstRowSecondHalf ,.secondRowSecondHalf{
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* ... (your existing styles) */
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+
+/* ... (your existing styles) */
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width: 600px) {
+    .firstRow,.secondRow{
+        flex-direction: column;
+        
+    }
+
+    .firstRowFirstHalf,
+    .firstRowSecondHalf {
+        width: 100%;
+    }
+        .secondRowFirstHalf{
+            width: 100%;
+        }
+    
+
+    .firstRowSecondHalf {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .secondRowSecondHalf{
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+}
+
+/* Media Query for screens between 601 and 1024 pixels (typical for tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+   
+   .singleDeviceIndexBody{
+    display:flex ;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+   }
+   
+    .firstRow,
+        .secondRow {
+            flex-direction: column;
+            width: 100%;
+            padding: 0%;
+            margin-top: 2%;
+            height: 100%;
+            justify-content: space-around;
+        }
+        .firstRowSecondHalf{
+            flex-direction: column;
+            width: 100%;
+            padding: 0%;
+            margin-top: 2%;
+        }
+        .secondRowSecondHalf{
+            flex-direction: column;
+            width: 100%;
+            padding: 0%;
+            margin: 0%;
+        }
+        .secondRowFirstHalf{
+            width: 100%;
+        }
+        .firstRowFirstHalf{
+            width: 100%;
+        }
+        
+    
+       
+}

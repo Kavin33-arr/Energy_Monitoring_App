@@ -1,0 +1,149 @@
+/* This_period.css */
+
+.This_period {
+    width: 651px;
+    height: 56%;
+    margin: 4% 2%;
+    flex-shrink: 0;
+    border-radius: 43px;
+    border: 1px solid #1EB3B3;
+    background: linear-gradient(180deg, #12133C 18.44%, rgba(16, 1, 1, 0.00) 100%);
+}
+
+.This_period_header {
+    margin: 4%;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.This_period_header button {
+    color: #FFFBFB;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid #1EB3B3;
+    width: 120px;
+    height: 40px;
+    border-radius: 43px;
+    background: black;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.This_period_header button:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.Current_values {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+.ML_Component {
+    color: white;
+    margin: 1% 8% 1% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Text {
+    width: 50%;
+}
+
+#Expected {
+    color: #00FFD1;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0px;
+    margin: 2%;
+}
+
+#Duration {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
+}
+
+.Price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 2% 0% 2% 0%;
+}
+
+.Price label {
+    color: #E7F7F4;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width: 600px) {
+    .This_period {
+        width: 90%;
+        height: 90%;
+        margin: 5%;
+    }
+
+    .Current_values {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        margin-bottom: 2%;
+    }
+
+    .This_period_header,
+    .This_period_header button,
+    .Text,
+    #Expected,
+    #Duration,
+    .Price label {
+        font-size: 18px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 860 pixels and a minimum width of 601 pixels */
+@media only screen and (max-width: 860px) and (min-width: 601px) {
+    .This_period {
+        width: 90%;
+        height: 90%;
+        margin: 4%;
+    }
+
+    .This_period_header,
+    .This_period_header button,
+    .Text,
+    #Expected,
+    #Duration,
+    .Price label {
+        font-size: 20px;
+    }
+}
+
+/* Additional media queries can be added as needed */

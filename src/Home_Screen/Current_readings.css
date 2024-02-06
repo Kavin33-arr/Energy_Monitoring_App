@@ -1,0 +1,58 @@
+.Current_readings {
+
+    width: 175px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid #00FFD1;
+}
+
+.Readings {
+    color: #00FFD1;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    width: 90%;
+    height: 50x;
+    margin: 2% 0% 0.5% 2%;
+    padding: 1%;
+}
+
+.Unit {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    color: #00FFD1;
+    padding: 1.5% 10% 1.5% 10%;
+}
+
+.Unit label {
+    color: #00FFD1;
+    background: none;
+}
+
+.Unit {
+    font-size: 16px;
+}
+
+.Current_readings:hover {
+    cursor: pointer;
+    transition: 0.25s;
+    background-color: aqua;
+    border: 2px solid black;
+
+    .Unit {
+        color: black
+    }
+
+    .Unit label {
+        color: black;
+        background: none;
+        cursor: pointer;
+    }
+
+    .Readings {
+        color: black;
+    }
+}

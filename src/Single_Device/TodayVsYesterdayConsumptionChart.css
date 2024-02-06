@@ -1,0 +1,53 @@
+.TodayVsYesterdayConsumptionHeader {
+    color: white;
+    text-align: center;
+}
+
+
+.TodayVsYesterdayConsumptionHeader span {
+    padding: 0% 2%;
+    font-size: 16px;
+}
+
+.TodayVsYesterdayConsumptionHeader svg {
+    position: relative;
+    top: 3px;
+}
+
+.TodayVsYesterdayConsumptionHeader svg:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.TodayVsYesterdayMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.TodayVsYesterdayConsumptionChart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    .TodayVsYesterdayConsumptionChart {
+
+        width: 100%;
+    }
+
+}
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    .TodayVsYesterdayConsumptionChart {
+        width: 100%;
+        padding: 0;
+        margin-top: 4%;
+    }
+}
+
+/* ... (your existing styles) */

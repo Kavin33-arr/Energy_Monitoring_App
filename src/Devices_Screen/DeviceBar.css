@@ -1,0 +1,53 @@
+/* Larger screens */
+.DeviceBar {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width:46%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2%;
+    border-radius: 43px;
+}
+
+.DeviceBarChart {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 2%;
+    justify-content: space-evenly;
+}
+.deviceBarHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+.headerDaily {
+    color: white;
+        font-weight: 600;
+        text-align: center;
+        padding: 2%;
+        font-size: 20px;
+        display: flex;
+}
+
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .DeviceBar {
+        width: 90%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .DeviceBarChart {
+        flex-direction: column;
+        padding: 0%;
+
+    }
+
+     /* Adjust other styles as needed for smaller screens */
+}

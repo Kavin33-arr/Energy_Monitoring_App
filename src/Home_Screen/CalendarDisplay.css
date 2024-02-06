@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+.CalendarDisplay {
+    background: linear-gradient(230deg, #12133C 18.44%, rgba(16, 1, 1, 0.00) 100%);
+}
+
+
+.dispCal {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    height: 100%;
+}
+
+.headerCalLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-grow: 1;
+}
+
+
+.CalendarDisplay {
+    margin: 4%;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00FFD1;
+    border-radius: 43px;
+}
+
+.headerCal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.filterOption {
+    margin: 4%;
+}
+
+.filterOption :hover {
+    cursor: pointer;
+}
+
+#calButton {
+    background: none;
+    font-size: 16px;
+    width: 100px;
+    color: white;
+    border: 1px solid #00FFD1;
+    border-radius: 15px;
+    padding: 4%;
+}
+
+#calButton option {
+    background: black;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #00FFD1;
+    border-radius: 15px;
+    padding: 4%;
+    text-align: center;
+}
+
+#calButton option:hover {
+    cursor: pointer;
+}
+
+/* CalendarDisplay.css */
+
+/* Customize the color and size of the calendar tiles *
+
+/* CalendarDisplay.css */
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+    box-sizing: border-box;
+}
+
+.react-calendar {
+    width: 95%;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.125em;
+    color: white;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day {
+    padding: 4%;
+    color: white;
+}
+
+button.react-calendar__navigation__label {
+    padding: 4%;
+    color: white;
+    size: 40px;
+
+}
+
+div.react-calendar__month-view__weekdays__weekday {
+    padding: 4%;
+}
+
+.react-calendar button {
+    color: white;
+}
+
+.dispCal .react-calendar .react-calendar__tile--active {
+    background-color: transparent;
+    color: #00FFD1;
+
+    scale: 1.5;
+    /* Set background color to transparent on hover */
+}
+
+/* Remove background color on hover */
+.react-calendar .react-calendar__tile:hover {
+    background-color: transparent;
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+    /* Set background color to transparent on hover */
+}
+
+button.react-calendar__navigation__arrow {
+    padding: 4%;
+}
+
+.react-calendar .react-calendar__navigation:hover,
+.react-calendar .react-calendar__navigation__label:hover {
+    background-color: transparent !important;
+    /* Reset background color on hover */
+    /* Reset text color on hover */
+    /* Add more styles as needed */
+}
+
+.react-calendar {
+    border: none;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend {
+
+    color: lightpink;
+    /* Change to your desired text color */
+    /* Add more styles as needed */
+}
+
+.react-calendar .react-calendar__navigation__label:hover {
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+}
+
+.react-calendar .react-calendar__navigation__label:enabled:focus {
+    color: #00FFD1;
+    background-color: transparent;
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button:hover {
+    background: transparent;
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+
+}
+
+.dispCal.react-calendar__navigation__arrow.react-calendar__navigation__prev-button:enabled:focus {
+    background: transparent;
+    color: #00FFD1;
+    scale: 1.5;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__next-button:hover {
+    background: transparent;
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__next-button:enabled:focus {
+    background: transparent;
+    color: #00FFD1;
+    scale: 1.5;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button:hover {
+    background: transparent;
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button:enabled:focus {
+    background: transparent;
+    color: #00FFD1;
+    scale: 1.5;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button:hover {
+    color: #00FFD1;
+    transition-duration: 0.25s;
+    scale: 1.5;
+    background: transparent;
+
+}
+
+button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button:enabled:focus {
+    color: #00FFD1;
+    scale: 1.5;
+    background: transparent;
+
+}
+
+/* CalendarDisplay.css */
+
+/* ... (your existing styles) */
+
+/* Override styles for the expanded month view */
+.react-calendar.react-calendar--selectable.react-calendar--single.react-calendar--range.react-calendar--multiple {
+    background-color: transparent !important;
+}
+
+.react-calendar .react-calendar__tile--now {
+    background-color: transparent !important;
+    color: hsl(178, 100%, 50%);
+
+    transform: scale(1.5);
+}
+
+.react-calendar .react-calendar__tile--now.react-calendar__month {
+    background-color: transparent !important;
+    color: hsl(178, 100%, 50%);
+    transform: scale(1.5);
+}
+
+.dispCal .react-calendar .react-calendar__month-view:enabled:focus {
+    background-color: black !important;
+    color: hsl(178, 100%, 50%);
+    scale: 1.5;
+    /* Add more styles as needed */
+}
+
+/* Add your custom styles for the month view here */
+
+/* ... (your existing styles) */
+@media (max-width: 1350px) {
+    .dispCal {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8%;
+        height: 100%;
+    }
+
+    .CalendarDisplay {
+        margin: 4%;
+        width: 650px;
+
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #00FFD1;
+        border-radius: 43px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+
+    button.react-calendar__tile.react-calendar__month-view__days__day {
+        padding: 2%;
+        color: white;
+    }
+
+    button.react-calendar__navigation__label {
+        padding: 2%;
+        color: white;
+        size: 40px;
+
+    }
+
+    div.react-calendar__month-view__weekdays__weekday {
+        padding: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 860px) and (min-width: 601px) {
+    .CalendarDisplay {
+        margin: 2%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #00FFD1;
+        border-radius: 43px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+
+    .dispCal {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 9%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .CalendarDisplay {
+        margin: 4%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #00FFD1;
+        border-radius: 43px;
+        font-size: 10px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+}

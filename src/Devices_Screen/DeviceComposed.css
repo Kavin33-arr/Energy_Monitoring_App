@@ -1,0 +1,98 @@
+/* Larger screens */
+.DeviceComposed {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 93%;
+    border: 1px solid #1EB3B3;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2% 4% 2% 4%;
+    border-radius: 43px;
+    padding-bottom: 2%;
+}
+
+.DeviceLineChart {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin: 2%;
+}
+
+.dropdowngroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerDaily {
+    width: 80%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+select {
+    border: 1px solid #1EB3B3;
+    margin-right: 3%;
+    color: white;
+    background: none;
+    width: 150px;
+    border-radius: 43px;
+    text-align: center;
+    /* Adjust the width as needed */
+}
+
+/* Set the width for dropdown options */
+select option {
+
+    color: white;
+    background: black;
+    border: 1px solid #1EB3B3;
+    border-radius: 43px;
+    /* Adjust the width as needed */
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .DeviceLine {
+        width: 90%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .DeviceLineChart {
+        flex-direction: column;
+        padding: 0%;
+
+    }
+
+    .headerDaily {
+        margin: 10%;
+
+    }
+
+    .dropdowngroup {
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+
+    select {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    select option {
+        color: white;
+        background: black;
+        border: 1px solid #1EB3B3;
+        border-radius: 43px;
+        /* Adjust the width as needed */
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+}

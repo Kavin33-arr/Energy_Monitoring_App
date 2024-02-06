@@ -1,0 +1,126 @@
+/* Larger screens */
+.DeviceLine {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 46%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 43px;
+    padding-bottom: 2%;
+    margin: 2%;
+}
+
+
+
+.DeviceLineChartHeader {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 100%;
+    justify-content: space-evenly;
+
+
+}
+.DeviceLineTopic{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding:4%;
+    font-size: 20px;
+}
+
+.dateLabel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.wideLabel{
+    flex-grow: 1;
+}
+
+.devicesLabel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.monthLabel {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.yearLabel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+.DeviceLineChartHeader svg:hover {
+    color: aqua;
+    cursor: pointer;
+    scale: 1.2;
+}
+
+
+
+/* Set the width for dropdown options */
+
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .DeviceLine {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+        .DeviceLineChartHeader {
+            flex-direction: column;
+            padding: 0%;
+            align-items: center;
+
+        }
+
+        
+
+                @media screen and (max-width: 768px) {
+        
+                    .devicesLabel,
+                    .yearLabel,
+                    .monthLabel,
+                    .dateLabel {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+        
+                    .smallLeftDeviceArrow,
+                    .smallRightDeviceArrow,
+                    .smallLeftYearArrow,
+                    .smallRightYearArrow,
+                    .smallLeftMonthArrow,
+                    .smallRightMonthArrow,
+                    .smallLeftDateArrow,
+                    .smallRightDateArrow {
+                        display: block;
+                    }
+        
+                    .wideLabel {
+                        flex-grow: 1;
+                        text-align: center;
+                        margin: 0 10px;
+                        /* Adjust margin as needed */
+                    }
+                }
+
+    /* Adjust other styles as needed for smaller screens */
+}

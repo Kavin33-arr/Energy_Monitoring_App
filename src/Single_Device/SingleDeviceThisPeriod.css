@@ -1,0 +1,99 @@
+.SingleDeviceThisPeriod {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 350px;
+    border-radius: 43px;
+    border: 1px solid #1EB3B3;
+    background: linear-gradient(180deg, rgba(20, 17, 174, 0.20) 0%, rgba(21, 20, 74, 0.00) 99%, #130F1A 100%);
+    text-align: center;
+    margin: 2%;
+}
+
+.singleDeviceThisPeriodLabel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    padding: 5%;
+}
+
+p {
+    color: #FFF;
+}
+
+.main {
+    border-radius: 5%;
+    width: 100%;
+    height: 60%;
+}
+
+.meters {
+    width: 50%;
+    border: none;
+    margin-top: 1%;
+    background: none;
+}
+
+
+h3 {
+    padding-top: 10px;
+    background: none;
+    display: inline-block;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    width: auto;
+}
+
+/* Media Query for screens with a maximum width of 860 pixels and a minimum width of 601 pixels */
+@media only screen and (max-width: 768px) {
+    .SingleDeviceThisPeriod{
+        width: 350px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 600 pixels (typical for phones) */
+@media only screen and (max-width: 600px) {
+    .SingleDeviceThisPeriod {
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 30px;
+        width: 90%;
+        height: 90%;
+        border-radius: 43px;
+        border: 1px solid #1EB3B3;
+        background: linear-gradient(180deg, rgba(20, 17, 174, 0.20) 0%, rgba(21, 20, 74, 0.00) 99%, #130F1A 100%);
+        text-align: center;
+        margin: 5%;
+    }
+
+    .main {
+        flex-direction: column;
+        border-radius: 5%;
+        width: 90%;
+        height: 80%;
+        margin-top: 10px;
+        align-content: center;
+        justify-content: center;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+
+
+    .meters {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        background: none;
+    }
+}
