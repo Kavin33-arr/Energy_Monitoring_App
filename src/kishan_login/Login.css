@@ -1,0 +1,146 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 15px;
+    width: 600px;
+    background: white;
+}
+
+.loginHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text{
+    color:rgb(1, 1, 105);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline{
+    width: 61px;
+    height: 6px;
+    background: rgb(1, 1, 105);
+    border-radius: 10px;
+}
+
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img{
+    margin: 0px 35px;
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(1, 1, 105);
+    font-size: 19px;
+    
+}
+
+
+.forgot-password{
+    text-align: center;
+    margin-top: 32px;
+    color:rgb(1, 1, 105);
+    font-size: 18px;
+    
+}
+
+.forgot-password span{
+    cursor: pointer;
+}
+.forgot-password span:hover{
+    color: rgba(156, 0, 156, 0.966);
+}
+
+.confirm-submission{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    background:rgb(1, 1, 105);
+    border-radius: 50px;
+    font-size: 19px;
+    color: #eaeaea;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit:hover{
+    letter-spacing: 0.35em;
+}
+
+.second{
+    background: #eaeaea;
+    color: rgb(1, 1, 105);
+}.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

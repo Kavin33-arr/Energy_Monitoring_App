@@ -1,55 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import './RealTimeCurrentLine.css'
-
-const RealTimeCurrentLine = () => {
-  const [data, setData] = useState([]);
-  const [currentTime, setCurrentTime] = useState(0);
-
- useEffect(() => {
-  const interval = setInterval(() => {
-    const newDataPoint = {
-      time: currentTime,
-      current: Math.floor(Math.random() * 100) + 50, // Replace with your actual current data
-    };
-
-    setData((prevData) => {
-      const newData = [...prevData, newDataPoint].slice(-15);
-      setCurrentTime((prevTime) => prevTime + 1);
-      return newData;
-    });
-  }, 1000); // Update every second
-
-  // Clear interval on component unmount
-  return () => clearInterval(interval);
-}, [currentTime]);
+  import React, { useEffect, useState } from 'react';
+  import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
+  import {ref,databaseRef,update,database} from '../firebase/firebase'
+  import './RealTimeCurrentLine.css'
 
 
-  return (
-      <div className="RealTimeCurrentLine">
-          <div className='realTimeCurrentLineHeader'>
-              This Session - Current Flow
-          </div>
-            <div className='realTimeCurrentLineChart'>
-            <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
-            <XAxis dataKey="time" label={{ value: 'Time (s)', position: 'insideBottom', dy: 10 }} />
-            <YAxis label={{ value: 'Current', angle: -90, position: 'insideLeft', dy: 40, dx: -10 }} />
+  const RealTimeCurrentLine = ( { current ,isChanged}) => {
+        const [data, setData] = useState([{ "current": 0, "time": 1 }]);
 
-            <Tooltip />
-            <Line
-            
-            dataKey="current"
-            name="Current"
-            stroke="#1EB3B3"
-            strokeWidth={3}
-            dot={false} // Disable dots for smoother curve
-          />
-            </LineChart>
-        </ResponsiveContainer>
-    </div>
-    </div>
-  );
-};
+  useEffect(() => {
+    let i = 2; // Start time from 2 since we already have time 1 in initial data
 
-export default RealTimeCurrentLine;
+    if (isChanged === 1) {
+      const intervalId = setInterval(() => {
+        // Calculate the new time
+        const time = i++;
+
+        // Update the data with the new record
+        setData(prevData => [...prevData, { "current": parseFloat(current), "time": time }].slice(-15));
+      }, 1000);
+
+      // Cleanup the interval when isChanged becomes 0
+      return () => clearInterval(intervalId);
+    } else {
+      // Reset data if isChanged is 0
+      setData([{ "current": 0, "time": 1 }]);
+    }
+  }, [current, isChanged]);
+    
+    return (
+        <div className="RealTimeCurrentLine">
+            <div className='realTimeCurrentLineHeader'>
+                This Session - Current Flow
+            </div>
+              <div className='realTimeCurrentLineChart'>
+              <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+              <XAxis dataKey="time" label={{ value: 'Time (s)', position: 'insideBottom', dy: 10 }} />
+              <YAxis label={{ value: 'Current', angle: -90, position: 'insideLeft', dy: 40, dx: -10 }} />
+
+              <Tooltip />
+              <Line
+              
+              dataKey="current"
+              name="Current"
+              stroke="#1EB3B3"
+              strokeWidth={3}
+              dot={false} // Disable dots for smoother curve
+            />
+              </LineChart>
+          </ResponsiveContainer>
+      </div>
+      </div>
+    );
+  };
+
+  export default RealTimeCurrentLine;

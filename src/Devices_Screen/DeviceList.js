@@ -1,20 +1,12 @@
-import React from 'react'
 import './DeviceList.css'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DeviceList = () => {
-    const list_of_devices = [{
-        dev_no: 1,
-        dev_id: "JA09",
-        dev_name: "Charger",
-        units: 123,
-        status: 1
-    }]
-
-
-
-
-
+const DeviceList = ({meter,voltage,isChanged,current}) => {
+  
+     
+   
+  console.log('Meter in DeviceList:', meter);
     return (
         <div className="deviceList">
             <div className='tableHeader'>
@@ -39,14 +31,14 @@ const DeviceList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {list_of_devices.map((device) => (
-                        <tr key={device.dev_id}>
-                            <td>{device.dev_no}</td>
-                            <td>{device.dev_id}</td>
-                            <td>{device.dev_name}</td>
-                            <td>{device.units}</td>
+                    {
+                        <tr>
+                            <td>{1}</td>
+                            <td>{"JA09"}}</td>
+                            <td>{"Charger"}</td>
+                            <td>{"123"}</td>
                             <td ><Link className="deviceLink" to="/device1">
-                                {device.status === 1 ? (
+                                {isChanged === 1 ? (
                                     <>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="svgOnline" viewBox="0 0 16 16">
                                             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
@@ -84,7 +76,7 @@ const DeviceList = () => {
                             </td>
 
                         </tr>
-                    ))}
+                    }
                 </tbody>
             </table>
         </div>

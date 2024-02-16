@@ -1,46 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './ThisSession.css';
 
-const useInterval = (callback, delay) => {
-  useEffect(() => {
-    const id = setInterval(callback, delay);
-    return () => clearInterval(id);
-  }, [callback, delay]);
-};
-
-const ThisSession = () => {
-  const [time, setTime] = useState({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  const [voltage, setVoltage] = useState(220); // Replace with your actual voltage value
-  const [current, setCurrent] = useState(2); // Replace with your actual current value
-    const [totalPower, setTotalPower] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
-      
-  let newTotalPrice=0
-  useInterval(() => {
-    const newSeconds = time.seconds + 1;
-    const newMinutes = time.minutes + Math.floor(newSeconds / 60);
-    const newHours = time.hours + Math.floor(newMinutes / 60);
-
-    const calculatedPower = voltage * current;
-      const newTotalPower = totalPower + calculatedPower;
-      newTotalPrice=2* newTotalPower
-   
-
-    setTime({
-      hours: newHours,
-      minutes: newMinutes % 60,
-      seconds: newSeconds % 60,
-    });
-
-      setTotalPower(newTotalPower);
-      setTotalPrice(newTotalPrice)
-
-  }, 1000);
-
+const ThisSession = ({ time, totalPower, totalPrice }) => {
+    
+  
   return (
     <div className='ThisSession'>
           <div className='thisSessionHeader'>This Session</div>
